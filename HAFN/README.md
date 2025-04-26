@@ -5,8 +5,8 @@ Specular Highlight Removal
 <br>
 
 <p align="center">
-<a href = "https://colab.research.google.com/drive/16mdFLTaBGyeQMO5KErDTClr3gW4WP1di?usp=sharing">
-    <img src="./images/colab.svg">
+<a href = "">
+    
 </a>
 <br>
 Try our method in Google Colab
