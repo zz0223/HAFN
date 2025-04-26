@@ -1,0 +1,60 @@
+NMS: 1
+SEED: 10            # random seed
+
+DEBUG: 1            # turns on debugging mode
+VERBOSE: 0          # turns on verbose mode in the output console
+
+TRAIN_INPUT_FLIST: ./data/inputDR_train.txt
+VAL_INPUT_FLIST: ./data/inputDR_test.txt
+TEST_INPUT_FLIST: ./data/input.txt
+
+TRAIN_GT_FLIST: ./data/gtDR_train.txt
+VAL_GT_FLIST: ./data/gtDR_test.txt
+TEST_GT_FLIST: ./data/gt.txt
+
+TRAIN_MASK_FLIST: ./data/maskDR_train.txt
+VAL_MASK_FLIST: ./data/maskDR_test.txt
+TEST_MASK_FLIST: ./data/mask.txt
+
+LR: 0.0001                    # learning rate
+D2G_LR: 0.1                   # discriminator/generator learning rate ratio
+BETA1: 0.0                    # adam optimizer beta1
+BETA2: 0.9                    # adam optimizer beta2
+
+INPUT_SIZE: 512               # input image size for training 0 for original size
+MAX_ITERS: 60800                # maximum number of iterations to train the model  100epoch
+
+L1_LOSS_WEIGHT: 1             # l1 loss weight
+FM_LOSS_WEIGHT: 10            # feature-matching loss weight
+STYLE_LOSS_WEIGHT: 0.1        # style loss weight
+CONTENT_LOSS_WEIGHT: 0.1      # perceptual loss weight
+INPAINT_ADV_LOSS_WEIGHT: 0  # adversarial loss weight
+
+GAN_LOSS: lsgan               # nsgan | lsgan | hinge
+GAN_POOL_SIZE: 0              # fake images pool size
+
+
+SAMPLE_INTERVAL: 10         # how many iterations to wait before sampling (0: never)
+SAMPLE_SIZE: 5               # number of images to sample
+LOG_INTERVAL: 304              # how many iterations to wait before logging training status (0: never)
+
+MASK_REVERSE: 0                 
+MASK_THRESHOLD: 80               
+
+
+GPU: [3]            # list of gpu ids
+BATCH_SIZE: 4               # input batch size for training
+
+SAVE_INTERVAL: 0          # how many iterations to wait before saving model (0: never) 100epoch
+EVAL_INTERVAL: 1520             # how many iterations to wait before model evaluation (0: never) 10epoch
+
+TRAIN_SAMPLE_INTERVAL: 900001       #20epoch 
+EVAL_SAMPLE_INTERVAL: 1520       #how many iterations to Save image
+
+
+TRAIN_SAMPLE_SAVE: ./result/train_sample/no
+EVAL_SAMPLE_SAVE: ./result/eval_sample/no
+TEST_SAMPLE_SAVE: ./result/test_20
+
+
+MODEL_LOAD: 
